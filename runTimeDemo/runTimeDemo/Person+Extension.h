@@ -7,6 +7,9 @@
 //
 
 #import "Person.h"
+#import "NSObject+GetProperty.h"
+#include <objc/runtime.h>
+#import <objc/message.h>
 
 @interface Person (Extension)
 - (void)runtimeWithObject:(Person *)person;

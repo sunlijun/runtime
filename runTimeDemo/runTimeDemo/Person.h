@@ -11,5 +11,5 @@
 @interface Person : NSObject
 @property (nonatomic,copy)NSString * name;
 @property (nonatomic,assign) NSInteger age;
-- (void)addressFormat:(NSString *)nfromat;
+//- (void)addressFormat:(NSString *)nfromat;
 @end

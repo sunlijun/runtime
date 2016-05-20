@@ -26,14 +26,28 @@
 {
     Person * person = [[Person alloc]init];
     [person runtimeWithObject:person];
-    [person addressFormat:@"CC擦擦擦擦查查查"];
+//     [person addressFormat:@"CC擦擦擦擦查查查"];
+    // 无参、无返回
+//    objc_msgSend(person, @selector(addressFormat));
+    // 有参、无返回
+//    objc_msgSend(person, @selector(addressFormat:),@"参数");
+    // 无参、有返回
+//    NSString *add =((NSString * (*)(id, SEL))objc_msgSend)((id)person, @selector(addressFormat)");
+    
+    // 有参、有返回
+     NSString *add = ((NSString * (*)(id, SEL, NSString *))
+     objc_msgSend)((id)person,
+                   @selector(addressFormat:),
+                   @"参数");
+    NSLog(@"ViewController   ===   %@",add);
 }
 - (void)subObject
 {
     Person * person = [[Person alloc]init];
     subPerson *subper = [[subPerson alloc]init];
     [subper runtimeWithObject:person];
-    [person addressFormat:@"CC擦擦擦擦查查查"];
+//    [person addressFormat:@"CC擦擦擦擦查查查"];
+
 
 }
 

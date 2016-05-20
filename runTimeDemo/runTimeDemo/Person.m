@@ -46,10 +46,11 @@
 }
 
 
-- (void)addressFormat:(NSString *)nfromat
+- (NSString *)addressFormat:(NSString *)nfromat
 {
-    _address = [NSString stringWithFormat:@"%@++++++%@",_address,nfromat];
-    NSLog(@"%@",_address);
+    NSString *str = [NSString stringWithFormat:@"%@++++++%@",_address,nfromat];
+    NSLog(@"%@",str);
+    return str;
 }
 
 @end

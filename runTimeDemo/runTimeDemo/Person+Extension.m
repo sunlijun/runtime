@@ -7,9 +7,6 @@
 //
 
 #import "Person+Extension.h"
-#import "NSObject+GetProperty.h"
-#include <objc/runtime.h>
-#import <objc/message.h>
 
 @implementation Person (Extension)
 
